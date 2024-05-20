@@ -22,4 +22,28 @@ public class CorsConfig {
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
+
+
+// testar no console do chrome:
+//
+//    fetch("http://localhost/usuarios", {
+//        method: "GET",
+//                headers: {
+//            "Content-Type": "application/json"
+//        }
+//    })
+//            .then((res) => {
+//        if (!res.ok) {
+//            throw new Error("Network response was not ok");
+//        }
+//        return res.json();
+//    })
+//            .then((user) => {
+//        console.log(user);
+//    })
+//            .catch((error) => {
+//        console.error("Error fetching data:", error);
+//    });
+
+
 }
