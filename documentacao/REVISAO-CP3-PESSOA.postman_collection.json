@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "f76db740-3c93-4ac0-a60a-34a8e1e66823",
+		"name": "REVISAO-CP3-PESSOA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1524675"
+	},
+	"item": [
+		{
+			"name": "localhost/usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"benefrancis@gmail.com\",\r\n    \"password\": \"root\",\r\n    \"pessoa\": {\r\n        \"nome\": \"Benefrancis\",\r\n        \"sobrenome\": \"Nascimento\",\r\n        \"email\": \"benefrancis@gmail.com\",\r\n        \"cpf\": \"24876691874\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/usuarios",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/usuarios?pessoa.nome=ben",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/usuarios?pessoa.nome=ben",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"usuarios"
+					],
+					"query": [
+						{
+							"key": "pessoa.nome",
+							"value": "ben"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/pessoas/1/fotos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Benefrancis/Pictures/4356600.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/pessoas/1/fotos",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"pessoas",
+						"1",
+						"fotos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
