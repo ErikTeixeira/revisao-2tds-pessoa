@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 
 @Entity
-@Table(name = "TB_FOTO")
+@Table(name = "TB_2TDSPF_FOTO")
 
 public class Foto {
 

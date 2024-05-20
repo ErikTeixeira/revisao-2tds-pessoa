@@ -16,7 +16,7 @@ import java.util.Set;
 @Builder
 
 @Entity
-@Table(name = "TB_PESSOA", uniqueConstraints = {
+@Table(name = "TB_2TDSPF_PESSOA", uniqueConstraints = {
         @UniqueConstraint(name = "UK_EMAIL", columnNames = "EMAIL_PESSOA"),
         @UniqueConstraint(name = "UK_CPF", columnNames = "CPF_PESSOA")
 })
@@ -42,19 +42,19 @@ public class Pessoa {
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinTable(
-            name = "TB_FOTO_PESSOA",
+            name = "TB_2TDSPF_FOTO_PESSOA",
             joinColumns = {
                     @JoinColumn(
                             name = "PESSOA",
                             referencedColumnName = "ID_PESSOA",
-                            foreignKey = @ForeignKey(name = "FK_PESSOA_FOTO")
+                            foreignKey = @ForeignKey(name = "FK_2TDSPF_PESSOA_FOTO")
                     )
             },
             inverseJoinColumns = {
                     @JoinColumn(
                             name = "FOTO",
                             referencedColumnName = "ID_FOTO",
-                            foreignKey = @ForeignKey(name = "FK_FOTO_PESSOA")
+                            foreignKey = @ForeignKey(name = "FK_2TDSPF_FOTO_PESSOA")
                     )
             }
     )

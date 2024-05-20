@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 
 @Entity
-@Table(name = "TB_USUARIO", uniqueConstraints = {
+@Table(name = "TB_2TDSPF_USUARIO", uniqueConstraints = {
         @UniqueConstraint(name = "UK_USERNAME" , columnNames = "USERNAME"),
         @UniqueConstraint(name = "UK_PESSOA" , columnNames = "PESSOA")
 })
@@ -34,7 +34,7 @@ public class Usuario {
     @JoinColumn(
             name = "PESSOA",
             referencedColumnName = "ID_PESSOA",
-            foreignKey = @ForeignKey(name = "FK_PESSOA_USUARIO")
+            foreignKey = @ForeignKey(name = "FK_2TDSPF_PESSOA_USUARIO")
     )
     private Pessoa pessoa;
 
