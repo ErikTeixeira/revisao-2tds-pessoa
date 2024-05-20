@@ -1,4 +1,4 @@
-package br.com.fiap.pessoa;
+package br.com.fiap.pessoa.config;
 
 
 import org.springframework.context.annotation.Bean;
