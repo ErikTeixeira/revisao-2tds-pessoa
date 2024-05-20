@@ -108,7 +108,7 @@ public class PessoaResource implements ResourceDTO<PessoaRequest, PessoaResponse
 
 
         Foto foto = Foto.builder()
-                .src(entity.getClass().getSimpleName().toLowerCase()
+                .src(entity.get().getClass().getSimpleName().toLowerCase()
                         + "_" + entity.get().getId()
                         + "_" + UUID.randomUUID().toString()
                         + "." + extension)
