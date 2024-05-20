@@ -1,0 +1,12 @@
+
+spring:
+  profiles:
+    active: desenvolvimento
+  application:
+    name: pessoa
+  thymeleaf:
+    check-template-location: true
+    prefix: classpath:/templates/
+    suffix: .html
+server:
+  port: 80

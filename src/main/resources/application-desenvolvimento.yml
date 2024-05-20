@@ -1,0 +1,17 @@
+
+spring:
+
+  #Configuração de Conexão com Banco de Dados
+  datasource:
+    url: jdbc:mariadb://${DB_SERVER:localhost}:${DB_PORT:3306}/${DB_NAME:revisao-pessoa}?createDatabaseIfNotExist=true
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+
+  
+  #Configuração de Mapeamento Objeto Relacional
+  jpa:
+    show_sql: true
+    hibernate:
+      ddl-auto: create
+    open-in-view: false
+
